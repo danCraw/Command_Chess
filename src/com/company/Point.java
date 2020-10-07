@@ -50,7 +50,7 @@ public class Point {
         }
         return upNode;
     }
-
+//do smth
     public Point getDownNode() {
         if (g.hasEdge(upNode, new Point(numberToLetter(letterToNumber(letter + -1)), number))) {
             downNode = new Point(numberToLetter(letterToNumber(letter + -1)), number);
