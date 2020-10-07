@@ -1,12 +1,16 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        Tank tank = new Tank("blue");
+        Commander commander = new Commander();
         WarZone warZone = new WarZone();
-//        Graph.graphPassage();
-        System.err.println(Graph.getB1());
-//        Graph.getA1().setRightConnection(Graph.getB1());
-        System.err.print(Graph.getA1().getRightConnection());
+
+
+
     }
 }

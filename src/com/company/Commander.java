@@ -1,13 +1,25 @@
 package com.company;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Commander {
 
-    Commander() {
-        drawCommander();
+    String team;
+    private String figurePicture = "C";
+    int move = 12;
+    public String currentPoint = "h12";
+
+    public String getFigurePicture() {
+        return figurePicture;
     }
 
-    private static void drawCommander() {
-        System.out.println("K");
+    public void setFigurePicture(String figurePicture) {
+        this.figurePicture = figurePicture;
+    }
+
+    public void paint () {
+
     }
 
 }

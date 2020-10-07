@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 public class ArrayUtils {
 
@@ -10,5 +10,4 @@ public class ArrayUtils {
         }
         return false;
     }
-
 }
