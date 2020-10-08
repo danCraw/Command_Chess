@@ -1,27 +1,27 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Movement {
 
-    private Point currentPoint;
-    private Point finishPoint;
-    private Point move;
+    private Node currentNode;
+    private Node finishNode;
+    private Node move;
 
-    public Movement(Point currentPoint, Point finishPoint, Point move) {
-        this.currentPoint = currentPoint;
-        this.finishPoint = finishPoint;
+    public Movement(Node currentNode, Node finishNode, Node move) {
+        this.currentNode = currentNode;
+        this.finishNode = finishNode;
         this.move = move;
     }
 
     public Movement() {
-        
+
     }
 
     public void left(int amountSteps) {
         while (amountSteps > 0) {
-        currentPoint = currentPoint.getLeftNode();
+        currentNode = currentNode.getLeftNode();
         amountSteps--;
         }
     }

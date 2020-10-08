@@ -1,20 +1,15 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class Point {
+public class Node {
+    private Map<DirectionType, List<Edge>> edgeMap = new HashMap<>();
 
-    private Graph g = new Graph();
+    private GroveType grove;
 
-    private String letter;
-    private Integer number;
-    Point leftNode;
-    Point rightNode;
-    Point upNode;
-    Point downNode;
-
-    public Point(String letter, Integer number) {
+    public Node(String letter, Integer number) {
         this.letter = letter;
         this.number = number;
     }
@@ -27,33 +22,33 @@ public class Point {
         return number;
     }
 
-    public Point getLeftNode() {
-        if (g.hasEdge(leftNode, new Point(letter, number - 1))) {
-            leftNode = new Point(letter, number - 1);
+    public Node getLeftNode() {
+        if (g.hasEdge(leftNode, new Node(letter, number - 1))) {
+            leftNode = new Node(letter, number - 1);
             return leftNode;
         } else {
             return null;
     }
 
-    public Point getRightNode() {
-        if (g.hasEdge(rightNode, new Point(letter, number + 1))) {
-            rightNode = new Point(letter, number + 1);
+    public Node getRightNode() {
+        if (g.hasEdge(rightNode, new Node(letter, number + 1))) {
+            rightNode = new Node(letter, number + 1);
             return rightNode;
         } else {
             return null;
         }
 
-    public Point getUpNode() {
-        if (g.hasEdge(upNode, new Point(numberToLetter(letterToNumber(letter + 1)), number))) {
-            upNode = new Point(numberToLetter(letterToNumber(letter + 1)), number);
+    public Node getUpNode() {
+        if (g.hasEdge(upNode, new Node(numberToLetter(letterToNumber(letter + 1)), number))) {
+            upNode = new Node(numberToLetter(letterToNumber(letter + 1)), number);
             return upNode;
         }
         return upNode;
     }
 //do smth
-    public Point getDownNode() {
-        if (g.hasEdge(upNode, new Point(numberToLetter(letterToNumber(letter + -1)), number))) {
-            downNode = new Point(numberToLetter(letterToNumber(letter + -1)), number);
+    public Node getDownNode() {
+        if (g.hasEdge(upNode, new Node(numberToLetter(letterToNumber(letter + -1)), number))) {
+            downNode = new Node(numberToLetter(letterToNumber(letter + -1)), number);
         }
         return downNode;
     }

@@ -1,17 +1,12 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Infantry {
 
-    private String team;
     private int move = 1;
     private String figurePicture;
-
-    public Infantry(String team) {
-        this.team = team;
-    }
 
     private int letterToNumber(String letter){
        Map<String, Integer> letterToNumber = new HashMap<>();

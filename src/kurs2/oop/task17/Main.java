@@ -1,6 +1,4 @@
-package com.company;
-
-import java.util.Scanner;
+package kurs2.oop.task17;
 
 public class Main {
 

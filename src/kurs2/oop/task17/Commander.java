@@ -1,4 +1,4 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
 import java.util.Map;

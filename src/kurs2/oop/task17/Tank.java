@@ -1,14 +1,14 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Tank{
+public class Tank {
+    private Map<DirectionType, Integer> moveAbilityMap;
 
-    private String team;
     private int move = 2;
-    private Point startPoint = new Point("g", 9);
-    private Point currentPoint = startPoint;
+    private Node startNode = new Node("g", 9);
+    private Node currentNode = startNode;
 
     public Tank(String team) {
         if (team.equals("biue")) {
@@ -46,17 +46,17 @@ public class Tank{
     }
 
 
-    public boolean goTo(Point currentPoint, Point finishPoint) {
+    public boolean goTo(Node currentNode, Node finishNode) {
 
-        if ((Math.abs(letterToNumber(finishPoint.getLetter()) - letterToNumber((currentPoint.getLetter()))) <= move) || (Math.abs((finishPoint.getNumber()) - (currentPoint.getNumber())) == 1)) {
-            currentPoint = finishPoint;
+        if ((Math.abs(letterToNumber(finishNode.getLetter()) - letterToNumber((currentNode.getLetter()))) <= move) || (Math.abs((finishNode.getNumber()) - (currentNode.getNumber())) == 1)) {
+            currentNode = finishNode;
             return true;
         }
 
         return false;
     }
 
-    public Point getCurrentPoint() {
-        return currentPoint;
+    public Node getCurrentNode() {
+        return currentNode;
     }
 }

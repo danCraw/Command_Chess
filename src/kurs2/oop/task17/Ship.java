@@ -1,13 +1,11 @@
-package com.company;
+package kurs2.oop.task17;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Ship {
 
-    String team;
     private String figurePicture = "S";
-    int move = 2;
     public String currentPoint = "g9";
 
     private int letterToNumber(String letter){
